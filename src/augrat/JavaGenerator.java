@@ -22,24 +22,21 @@ public class JavaGenerator {
         PrintWriter pw = new PrintWriter("AUGRAT.java"); 
           
         // BufferedReader object for file1.txt 
-        BufferedReader br = new BufferedReader(new FileReader("file1.txt")); 
-          
+        BufferedReader br = new BufferedReader(new FileReader(args)); 
         String line = br.readLine(); 
           
-        // loop to copy each line of  
-        // file1.txt to  file3.txt 
+        // loop to copy each line of files
         while (line != null) 
         { 
             pw.println(line); 
             line = br.readLine(); 
         } 
           
-        br = new BufferedReader(new FileReader("file2.txt")); 
+        br = new BufferedReader(new FileReader(args2)); 
           
         line = br.readLine(); 
           
         // loop to copy each line of  
-        // file2.txt to  file3.txt 
         while(line != null) 
         { 
             pw.println(line); 

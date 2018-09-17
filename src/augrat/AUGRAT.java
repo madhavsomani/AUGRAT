@@ -5,6 +5,10 @@
  */
 package augrat;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Madhav
@@ -73,8 +77,12 @@ public class AUGRAT extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        
+        try {
+            // TODO add your handling code here:
+            JavaGenerator.merger("libs/import.augrat", "libs/body.augrat");
+        } catch (IOException ex) {
+            Logger.getLogger(AUGRAT.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
