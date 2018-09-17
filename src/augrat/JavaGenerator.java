@@ -20,7 +20,6 @@ public class JavaGenerator {
    
         // PrintWriter object for file3.txt 
         PrintWriter pw = new PrintWriter("AUGRAT.java"); 
-          
         // BufferedReader object for file1.txt 
         BufferedReader br = new BufferedReader(new FileReader(args)); 
         String line = br.readLine(); 
@@ -35,16 +34,14 @@ public class JavaGenerator {
         br = new BufferedReader(new FileReader(args2)); 
           
         line = br.readLine(); 
-          
         // loop to copy each line of  
         while(line != null) 
         { 
             pw.println(line); 
             line = br.readLine(); 
         } 
-          
+        
         pw.flush(); 
-          
         // closing resources 
         br.close(); 
         pw.close(); 

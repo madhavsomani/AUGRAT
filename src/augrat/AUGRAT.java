@@ -8,6 +8,7 @@ package augrat;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -40,7 +41,9 @@ public class AUGRAT extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel1.setText("AUGRAT");
 
-        jButton1.setText("GENERAT");
+        jButton1.setText("GENERATE .Java");
+        jButton1.setToolTipText("");
+        jButton1.setActionCommand("");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -80,6 +83,8 @@ public class AUGRAT extends javax.swing.JFrame {
         try {
             // TODO add your handling code here:
             JavaGenerator.merger("libs/import.augrat", "libs/body.augrat");
+            //default title and icon
+         // JOptionPane.showMessageDialog(frame,"Eggs are not supposed to be green.");
         } catch (IOException ex) {
             Logger.getLogger(AUGRAT.class.getName()).log(Level.SEVERE, null, ex);
         }
