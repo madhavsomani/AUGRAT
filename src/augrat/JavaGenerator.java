@@ -13,7 +13,7 @@ import java.io.PrintWriter;
 
 /**
  *
- * @author Maheswari Vasu
+ * @author Madhav Somani
  */
 public class JavaGenerator {
    public static void merger(String args , String args2) throws FileNotFoundException, IOException{

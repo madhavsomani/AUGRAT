@@ -160,10 +160,11 @@ public class AUGRAT extends javax.swing.JFrame {
         try {
             // TODO add your handling code here:
             JavaGenerator.merger("libs/import.augrat", "libs/body.augrat");
-            //default title and icon
-         // JOptionPane.showMessageDialog(frame,"Eggs are not supposed to be green.");
+            
+            JOptionPane.showMessageDialog(null,"AUGRAT.java Successfully generated!");
         } catch (IOException ex) {
             Logger.getLogger(AUGRAT.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "Error in generating .java File!.","AUGRAT",JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
