@@ -41,7 +41,7 @@ public class AUGRAT extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        javaconsole = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
@@ -102,9 +102,9 @@ public class AUGRAT extends javax.swing.JFrame {
                 .addContainerGap(29, Short.MAX_VALUE))
         );
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        javaconsole.setColumns(20);
+        javaconsole.setRows(5);
+        jScrollPane1.setViewportView(javaconsole);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText(".Java Output Console");
@@ -226,8 +226,8 @@ public class AUGRAT extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField2;
+    public static javax.swing.JTextArea javaconsole;
     private javax.swing.JTextField packagename;
     // End of variables declaration//GEN-END:variables
 }

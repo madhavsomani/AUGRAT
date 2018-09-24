@@ -6,10 +6,13 @@
 package augrat;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.util.List;
 
 /**
  *
@@ -47,10 +50,23 @@ public class JavaGenerator {
         } 
         
         pw.flush(); 
-        // closing resources 
         br.close(); 
         pw.close(); 
           
-       
+        readAugratfile();
    }
+   
+   public static void readAugratfile() throws IOException
+   {
+  
+        // Reading  Augrat java file 
+         AUGRAT.javaconsole.setText("");
+         List<String> lines = Files.readAllLines(new File("Augrat.java").toPath());
+         for(int i=0;i<=lines.size();i++)
+         {
+            AUGRAT.javaconsole.append(lines.get(i));
+             AUGRAT.javaconsole.append("\n");
+         }
+   }
+   
 }
