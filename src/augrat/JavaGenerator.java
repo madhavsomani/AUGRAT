@@ -16,12 +16,16 @@ import java.io.PrintWriter;
  * @author Madhav Somani
  */
 public class JavaGenerator {
-   public static void merger(String args , String args2) throws FileNotFoundException, IOException{
+   public static void merger(String importloc, String bodyloc , String packageName) throws FileNotFoundException, IOException{
    
         // PrintWriter object for file3.txt 
         PrintWriter pw = new PrintWriter("AUGRAT.java"); 
+        
+        //setPacakge Name
+        pw.println("package " + packageName + ";"); 
+        
         // BufferedReader object for file1.txt 
-        BufferedReader br = new BufferedReader(new FileReader(args)); 
+        BufferedReader br = new BufferedReader(new FileReader(importloc)); 
         String line = br.readLine(); 
           
         // loop to copy each line of files
@@ -30,8 +34,9 @@ public class JavaGenerator {
             pw.println(line); 
             line = br.readLine(); 
         } 
-          
-        br = new BufferedReader(new FileReader(args2)); 
+        
+        
+        br = new BufferedReader(new FileReader(bodyloc)); 
           
         line = br.readLine(); 
         // loop to copy each line of  

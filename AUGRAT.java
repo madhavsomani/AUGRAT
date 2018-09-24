@@ -1,10 +1,12 @@
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-public class MainActivity extends AppCompatActivity {
+package com.example.madhav.try1;
+import android.app.Activity;
+import android.widget.Toast;
+public class Augrat {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public static void compileTest(Activity activity )
+    {
+        Toast.makeText(activity.getApplicationContext(),"Augrat successfully compiled!", Toast.LENGTH_LONG).show();
     }
+
+    
 }
