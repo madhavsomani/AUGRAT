@@ -165,8 +165,6 @@ public class AUGRAT extends javax.swing.JFrame {
             if(!packagename.getText().isEmpty())
             {
               JavaGenerator.merger("libs/import.augrat", "libs/body.augrat",packagename.getText());
-            
-              JOptionPane.showMessageDialog(null,"AUGRAT.java Successfully generated!");
             }else{
                  JOptionPane.showMessageDialog(null, "Enter Valid Package name before generating .java File!.","AUGRAT",JOptionPane.ERROR_MESSAGE);
             }

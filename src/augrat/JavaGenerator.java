@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.util.List;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -54,6 +55,7 @@ public class JavaGenerator {
         pw.close(); 
           
         readAugratfile();
+        JOptionPane.showMessageDialog(null,"AUGRAT.java Successfully generated!");
    }
    
    public static void readAugratfile() throws IOException
@@ -62,7 +64,7 @@ public class JavaGenerator {
         // Reading  Augrat java file 
          AUGRAT.javaconsole.setText("");
          List<String> lines = Files.readAllLines(new File("Augrat.java").toPath());
-         for(int i=0;i<=lines.size();i++)
+         for(int i=0;i<lines.size();i++)
          {
             AUGRAT.javaconsole.append(lines.get(i));
              AUGRAT.javaconsole.append("\n");
