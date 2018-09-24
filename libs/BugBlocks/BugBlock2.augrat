@@ -1,0 +1,9 @@
+public class Augrat {
+
+    public static void compileTest(Activity activity )
+    {
+        Toast.makeText(activity.getApplicationContext(),"Augrat successfully compiled!", Toast.LENGTH_LONG).show();
+    }
+
+    
+}

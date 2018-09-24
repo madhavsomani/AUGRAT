@@ -19,7 +19,7 @@ public class JavaGenerator {
    public static void merger(String importloc, String bodyloc , String packageName) throws FileNotFoundException, IOException{
    
         // PrintWriter object for file3.txt 
-        PrintWriter pw = new PrintWriter("AUGRAT.java"); 
+        PrintWriter pw = new PrintWriter("Augrat.java"); 
         
         //setPacakge Name
         pw.println("package " + packageName + ";"); 
