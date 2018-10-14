@@ -7,7 +7,7 @@ package augrat;
 
 public class FuseEngine {
     
-    public static void bugFusion( String bodyloc , String[] headers , String[] bugBlock)
+    public static void bugFusion(String bodyloc , String[] headers , String[] bugBlock)
     {
        
     }
