@@ -1,0 +1,24 @@
+{
+  "AUGRATBugBlock": {
+  "nameOfBug": "StackOverflowError",
+  "className": "StackOverflowErrorEx",
+  "methodName": "stackOverflowError",
+  "numberOfLines": 10,
+  "headers": ["android.util.Log"],
+  "bugInfo": "Thrown when a stack overflow occurs because an application recurses too deeply.",
+  "bugBlock": [ 
+  " public static void recursivePrint(int num) {",
+        "Log.d(\"Output \", \"Number: \" + num);",
+
+        "if (num == 0)",
+            "return;",
+        "else",
+            "recursivePrint(++num);",
+    "}",
+
+    "public void stackOverflowError() {",
+        "StackOverflowErrorEx.recursivePrint(1);",
+    "}"
+  ]
+    }
+  }
