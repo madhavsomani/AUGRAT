@@ -1,4 +1,4 @@
-package asdasd;
+package com.example.com;
 import android.app.Activity;
 import android.widget.Toast;
 public class Augrat {
