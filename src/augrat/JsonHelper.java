@@ -14,9 +14,7 @@ import org.json.JSONObject;
 
 public class JsonHelper {
 
-     
-      
-     public static JsonBugBlockModels bugBlockJsonRead(String bugBlockJsonLoc)
+    public static JsonBugBlockModels bugBlockJsonRead(String bugBlockJsonLoc)
     {
        BufferedReader reader = null;
        JSONObject configObject = null;
