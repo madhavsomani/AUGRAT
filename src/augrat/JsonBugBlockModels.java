@@ -5,13 +5,15 @@
  */
 package augrat;
 
+import java.util.ArrayList;
+
 public class JsonBugBlockModels {
     
    public String nameOfBug;
    public String className;
    public String methodName;
    public int numberOfLines;
-   public String[] headers;
+   public ArrayList<String> headers;
    public String bugInfo;
-   public String[] bugBlock;
+   public ArrayList<String> bugBlock;
 }

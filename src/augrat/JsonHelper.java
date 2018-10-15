@@ -12,14 +12,14 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class JsonReader {
+public class JsonHelper {
 
-     public static void bugBlockJsonRead(String bugBlockJsonLoc)
+     public static JsonBugBlockModels bugBlockJsonRead(String bugBlockJsonLoc)
     {
-      BufferedReader reader;
-      JSONObject configObject;
+      BufferedReader reader = null;
+      JSONObject configObject = null;
       JsonBugBlockModels JsonBugBlockModel = new JsonBugBlockModels();
-         // read the configuration information
+         
     try {
         reader = new BufferedReader(new FileReader(bugBlockJsonLoc));
 
@@ -31,33 +31,50 @@ public class JsonReader {
 
         configObject = new JSONObject(jsonData.toString());
         System.out.println(configObject);
+       
+    } catch (IOException | JSONException e) {
         
+        showErrorMessage("Error in Loading Json", e);
+        return null;
+    }
+    
+     try {
+       if(configObject != null)
+       {
         JsonBugBlockModel.nameOfBug = configObject.getJSONObject("AUGRATBugBlock").getString("nameOfBug");
         JsonBugBlockModel.className = configObject.getJSONObject("AUGRATBugBlock").getString("className");
         JsonBugBlockModel.methodName = configObject.getJSONObject("AUGRATBugBlock").getString("methodName");
         JsonBugBlockModel.numberOfLines = configObject.getJSONObject("AUGRATBugBlock").getInt("numberOfLines");
         JsonBugBlockModel.bugInfo = configObject.getJSONObject("AUGRATBugBlock").getString("bugInfo");
         
+       }
         
-      //  JsonBugBlockModel.headers = configObject.getJSONObject("AUGRATBugBlock").getJSONObject("headers");
-        
-       // JsonBugBlockModel.bugBlock = configObject.getJSONObject("AUGRATBugBlock").getString("bugBlock");
-        
-    } catch (IOException | JSONException e) {
-        
-        showErrorMessage("Missing Configuration Information", e);
+    } catch(JSONException e) {
+        showErrorMessage("Json String Import Error: ", e);
+        return null;
     }
-    
-    // get the switcher delay information from the configuration object
-    double delay = 10; // default to 10 minutes if the config information is wrong
-    try {
-       
-    } catch(Exception e) {
-        showErrorMessage("Configuration Error: ", e);
-    }
-    
+     
+     try{
+     
+         JSONArray headersArray = configObject.getJSONObject("AUGRATBugBlock").getJSONArray("headers");
+        for(int i = 0; i < headersArray.length(); i++) {
+            JsonBugBlockModel.headers.add(headersArray.getString(i));
+        }
+        
+        JSONArray bugBlockArray = configObject.getJSONObject("AUGRATBugBlock").getJSONArray("bugBlock");
+        for(int i = 0; i < bugBlockArray.length(); i++) {
+            JsonBugBlockModel.bugBlock.add(bugBlockArray.getString(i));
+        }
+        
+     }
+     catch(JSONException e){
+         showErrorMessage("Json bugBlock and Header Import Error: ", e);
+         return null;
+     }
+     
+     return JsonBugBlockModel;
+     
   }
-
     private static void showErrorMessage(String missing_Configuration_Information, Exception e) {
         JOptionPane.showMessageDialog(null, missing_Configuration_Information + "\n Error: " + e.toString(),"AUGRAT",JOptionPane.ERROR_MESSAGE);
     }
