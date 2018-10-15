@@ -51,7 +51,7 @@ public class JsonHelper {
         for(int i = 0; i < headersArray.length(); i++) {
             jsonBugBlockModel.headers.add(headersArray.getString(i));
         }
-        
+       
         JSONArray bugBlockArray = configObject.getJSONObject("AUGRATBugBlock").getJSONArray("bugBlock");
         for(int i = 0; i < bugBlockArray.length(); i++) {
             jsonBugBlockModel.bugBlock.add(bugBlockArray.getString(i));

@@ -13,6 +13,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -55,6 +57,22 @@ public class JavaGenerator {
         pw.close(); 
           
         readAugratfile();
+        augratFileDelete(bodyloc);
+    
+        try{
+           duplicateFiles(  "libs/bodyFormat.augrat",bodyloc);
+        }catch (IOException ex) {
+            Logger.getLogger(AUGRAT.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "Error in generating restoring body.augrat File!", "AUGRAT", JOptionPane.ERROR_MESSAGE);
+        }
+        
+         try{
+           duplicateFiles("libs/importFormat.augrat",importloc);
+        }catch (IOException ex) {
+            Logger.getLogger(AUGRAT.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null, "Error in generating restoring body.augrat File!", "AUGRAT", JOptionPane.ERROR_MESSAGE);
+        }
+        
         JOptionPane.showMessageDialog(null,"Augrat.java Successfully generated!");
    }
    
@@ -71,4 +89,94 @@ public class JavaGenerator {
          }
    }
    
+   public static void augratFileDelete(String loc)
+   {
+        File file = new File(loc); 
+          
+        if(file.delete()) 
+        { 
+            System.out.println("File deleted successfully"); 
+        } 
+        else
+        { 
+            System.out.println("Failed to delete the file"); 
+        } 
+   
+   }
+   
+   public static void duplicateFiles(String loc,String target) throws IOException
+    {
+         // PrintWriter object for file3.txt 
+        PrintWriter pw = new PrintWriter(target); 
+        
+        // BufferedReader object for file1.txt 
+        BufferedReader br = new BufferedReader(new FileReader(loc)); 
+        String line = br.readLine(); 
+          
+        // loop to copy each line of files
+        while (line != null) 
+        { 
+            pw.println(line); 
+            line = br.readLine(); 
+        } 
+        
+        pw.flush(); 
+        br.close(); 
+        pw.close(); 
+          
+    }
+   
+   public static void duplicateStringRemove(String loc) throws IOException
+    {
+        // PrintWriter object for output.txt 
+        PrintWriter pw = new PrintWriter(loc); 
+          
+        // BufferedReader object for input.txt 
+        BufferedReader br1 = new BufferedReader(new FileReader(loc)); 
+          
+        String line1 = br1.readLine(); 
+          
+        // loop for each line of input.txt 
+        while(line1 != null) 
+        { 
+            boolean flag = false; 
+              
+            // BufferedReader object for output.txt 
+            BufferedReader br2 = new BufferedReader(new FileReader(loc)); 
+              
+            String line2 = br2.readLine(); 
+              
+            // loop for each line of output.txt 
+            while(line2 != null) 
+            { 
+                  
+                if(line1.equals(line2)) 
+                { 
+                    flag = true; 
+                    break; 
+                } 
+                  
+                line2 = br2.readLine(); 
+              
+            } 
+              
+            // if flag = false 
+            // write line of input.txt to output.txt 
+            if(!flag){ 
+                pw.println(line1); 
+                  
+                // flushing is important here 
+                pw.flush(); 
+            } 
+              
+            line1 = br1.readLine(); 
+              
+        } 
+          
+        // closing resources 
+        br1.close(); 
+        pw.close(); 
+          
+    }
+    
 }
