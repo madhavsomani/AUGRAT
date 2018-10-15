@@ -9,7 +9,7 @@
       ],
       "bugInfo":"Thrown when an exceptional arithmetic condition has occurred. For example, an integer \"divide by zero\" throws an instance of this class. ",
       "bugBlock":[
-         "public void divideByZero() {",
+         "public static void divideByZero() {",
          "int num1 = 15;",
          "int num2 = 0;",
          "int result = 0;",

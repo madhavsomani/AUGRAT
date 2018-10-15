@@ -9,7 +9,7 @@
       ],
       "bugInfo":"Thrown when an application attempts to use null in a case where an object is required.",
       "bugBlock":[
-         "public void nullPointerException() {",
+         "public static void nullPointerException() {",
          "String ptr = null;",
          "if (ptr.equals(\"npe\"))",
          "Log.d(\"Output \", \"Equal\");",

@@ -9,7 +9,7 @@
       ],
       "bugInfo":"Thrown when an application tries to load in a class through its string name but no definition for the class with the specified name could be found.",
       "bugBlock":[
-         "public void classNotFound() {",
+         "public static void classNotFound() {",
          "try {",
          "Class.forName(\"Augrat\");",
          "} catch (ClassNotFoundException cnfe) {",

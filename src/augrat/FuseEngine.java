@@ -20,14 +20,9 @@ public class FuseEngine {
         PrintWriter pw = new PrintWriter("libs/body.augrat"); 
         PrintWriter px = new PrintWriter("libs/import.augrat");
         
-        //setPacakge Name
-       // pw.println("package " + packageName + ";"); 
-        
-        // BufferedReader object for file1.txt 
         BufferedReader br = new BufferedReader(new FileReader(bodyloc)); 
         String line = br.readLine(); 
-          
-        // loop to copy each line of files
+      
         while (line != null) 
         { 
             pw.println(line); 
@@ -36,8 +31,7 @@ public class FuseEngine {
                 {
                       pw.println("          "+model.methodName);
                 }
-                
-                 //Adding bug method body in body.augrat from BugBlock
+                //Adding bug method body in body.augrat from BugBlock
                 if(line.contains("<<!@AUGRAT Method Index@!>>"))
                 {
                     try{
@@ -51,9 +45,7 @@ public class FuseEngine {
                 }
             line = br.readLine(); 
         } 
-        
-        
-        br = new BufferedReader(new FileReader(importloc)); 
+       br = new BufferedReader(new FileReader(importloc)); 
           
         line = br.readLine(); 
         // loop to copy each line of  
