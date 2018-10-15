@@ -6,7 +6,7 @@
   "numberOfLines": 5,
   "headers": ["android.util.Log"],
   "bugInfo": "Thrown to indicate that an array has been accessed with an illegal index. The index is either negative or greater than or equal to the size of the array.",
-  "bugBlock": [ 
+  "bugBlock": [
   "public void arrayIndexOutOfBounds() {",
         "int arr[] = {1, 2, 3, 4, 5};",
         "for (int i = 0; i <= arr.length; i++)",
