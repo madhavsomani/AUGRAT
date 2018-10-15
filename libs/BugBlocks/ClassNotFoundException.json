@@ -2,7 +2,7 @@
    "AUGRATBugBlock":{
       "nameOfBug":"ClassNotFoundException",
       "className":"ClassNotFoundExceptionEx",
-      "methodName":"classNotFound",
+      "methodName":"classNotFound();",
       "numberOfLines":7,
       "headers":[
          "android.util.Log"

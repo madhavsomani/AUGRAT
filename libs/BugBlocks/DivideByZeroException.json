@@ -2,7 +2,7 @@
    "AUGRATBugBlock":{
       "nameOfBug":"DivideByZeroException",
       "className":"DivideByZeroEx",
-      "methodName":"divideByZero",
+      "methodName":"divideByZero();",
       "numberOfLines":7,
       "headers":[
          "android.util.Log"

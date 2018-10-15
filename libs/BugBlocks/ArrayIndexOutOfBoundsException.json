@@ -2,7 +2,7 @@
   "AUGRATBugBlock": {
   "nameOfBug": "ArrayIndexOutOfBoundsException",
   "className": "ArrayIndexOutOfBoundsExceptionEx",
-  "methodName": "arrayIndexOutOfBounds",
+  "methodName": "arrayIndexOutOfBounds();",
   "numberOfLines": 5,
   "headers": ["android.util.Log"],
   "bugInfo": "Thrown to indicate that an array has been accessed with an illegal index. The index is either negative or greater than or equal to the size of the array.",

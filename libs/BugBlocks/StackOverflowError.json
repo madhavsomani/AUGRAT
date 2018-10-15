@@ -2,7 +2,7 @@
    "AUGRATBugBlock":{
       "nameOfBug":"StackOverflowError",
       "className":"StackOverflowErrorEx",
-      "methodName":"stackOverflowError",
+      "methodName":"stackOverflowError();",
       "numberOfLines":10,
       "headers":[
          "android.util.Log"

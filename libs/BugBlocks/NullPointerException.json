@@ -2,7 +2,7 @@
    "AUGRATBugBlock":{
       "nameOfBug":"NullPointerException",
       "className":"NullPointerExceptionEx",
-      "methodName":"nullPointerException",
+      "methodName":"nullPointerException();",
       "numberOfLines":7,
       "headers":[
          "android.util.Log"
