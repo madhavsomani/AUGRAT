@@ -20,17 +20,14 @@ import javax.swing.JOptionPane;
  */
 public class AUGRAT extends javax.swing.JFrame {
 
-
-   
     /**
      * Creates new form AUGRAT
      */
     public AUGRAT() {
         initComponents();
-       jTextArea2.setText("Bug description : Thrown when a stack overflow occurs because an application recurses \ntoo deeply.");
+        jTextArea2.setText("Bug description : Thrown when a stack overflow occurs because an application recurses \ntoo deeply.");
     }
 
-         
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -265,25 +262,62 @@ public class AUGRAT extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+
+        JComboBox cb = bugblockselectcombobox;
+        JsonBugBlockModels model = null;
+        String msg = (String) cb.getSelectedItem();
+       
+        switch (msg) {
+            case "StackOverflowError":
+                model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/StackOverflowError.json");
+                break;
+            case "NullPointerException":
+                model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/NullPointerException.json");
+                break;
+            case "DivideByZeroException":
+                model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/DivideByZeroException.json");
+                 break;
+            case "ClassNotFoundException":
+                model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/ClassNotFoundException.json");
+                break;
+            case "ArrayIndexOutOfBoundsException":
+                model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/ArrayIndexOutOfBoundsException.json");
+                break;
+        }
+
+        if (model != null) {
+            try {
+                FuseEngine.bugFusion("libs/bodyFormat.augrat","libs/importFormat.augrat", model);
+            } catch (IOException ex) {
+                Logger.getLogger(AUGRAT.class.getName()).log(Level.SEVERE, null, ex);
+                 JOptionPane.showMessageDialog(null, "Error in Adding BugBlock!", "AUGRAT", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void bugblockselectcomboboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bugblockselectcomboboxActionPerformed
         // TODO add your handling code here:
 
-        JComboBox cb = (JComboBox)evt.getSource();
-        String msg = (String)cb.getSelectedItem();
+        JComboBox cb = (JComboBox) evt.getSource();
+        String msg = (String) cb.getSelectedItem();
 
-        switch(msg){
-            case "StackOverflowError" : jTextArea2.setText("Bug description : Thrown when a stack overflow occurs because an application recurses \ntoo deeply.");
-            break;
-            case "NullPointerException" : jTextArea2.setText("Bug description : Thrown when an application attempts to use null in a case where\nan object is required.");
-            break;
-            case "DivideByZeroException" : jTextArea2.setText("Bug description : Thrown when an exceptional arithmetic condition has occurred.\nFor example, an integer \\\"divide by zero\\\" throws an instance of this class. ");
-            break;
-            case "ClassNotFoundException" : jTextArea2.setText("Bug description : Thrown when an application tries to load in a class through its string name\nbut no definition for the class with the specified name could be found.");
-            break;
-            case "ArrayIndexOutOfBoundsException" : jTextArea2.setText("Bug description : Thrown to indicate that an array has been accessed with an illegal index.\nThe index is either negative or greater than or equal to the size of the array.");
-            break;
+        switch (msg) {
+            case "StackOverflowError":
+                jTextArea2.setText("Bug description : Thrown when a stack overflow occurs because an application recurses \ntoo deeply.");
+                break;
+            case "NullPointerException":
+                jTextArea2.setText("Bug description : Thrown when an application attempts to use null in a case where\nan object is required.");
+                break;
+            case "DivideByZeroException":
+                jTextArea2.setText("Bug description : Thrown when an exceptional arithmetic condition has occurred.\nFor example, an integer \\\"divide by zero\\\" throws an instance of this class. ");
+                break;
+            case "ClassNotFoundException":
+                jTextArea2.setText("Bug description : Thrown when an application tries to load in a class through its string name\nbut no definition for the class with the specified name could be found.");
+                break;
+            case "ArrayIndexOutOfBoundsException":
+                jTextArea2.setText("Bug description : Thrown to indicate that an array has been accessed with an illegal index.\nThe index is either negative or greater than or equal to the size of the array.");
+                break;
         }
 
     }//GEN-LAST:event_bugblockselectcomboboxActionPerformed
@@ -294,17 +328,15 @@ public class AUGRAT extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try {
-            if(!packagename.getText().isEmpty())
-            {
-                JsonBugBlockModels model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/StackOverflowError.json");
-                JavaGenerator.merger("libs/import.augrat", "libs/body.augrat",packagename.getText());
-            }else{
-                JOptionPane.showMessageDialog(null, "Enter Valid Package name before generating .java File!.","AUGRAT",JOptionPane.ERROR_MESSAGE);
+            if (!packagename.getText().isEmpty()) {
+                JavaGenerator.merger("libs/import.augrat", "libs/body.augrat", packagename.getText());
+            } else {
+                JOptionPane.showMessageDialog(null, "Enter Valid Package name before generating .java File!.", "AUGRAT", JOptionPane.ERROR_MESSAGE);
             }
 
         } catch (IOException ex) {
             Logger.getLogger(AUGRAT.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(null, "Error in generating .java File!.","AUGRAT",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Error in generating .java File!.", "AUGRAT", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -345,7 +377,6 @@ public class AUGRAT extends javax.swing.JFrame {
                 new AUGRAT().setVisible(true);
             }
         });
-        
 
     }
 

@@ -55,7 +55,7 @@ public class JavaGenerator {
         pw.close(); 
           
         readAugratfile();
-        JOptionPane.showMessageDialog(null,"AUGRAT.java Successfully generated!");
+        JOptionPane.showMessageDialog(null,"Augrat.java Successfully generated!");
    }
    
    public static void readAugratfile() throws IOException
