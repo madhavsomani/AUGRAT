@@ -16,8 +16,8 @@
          "else",
          "recursivePrint(++num);",
          "}",
-         "public void stackOverflowError() {",
-         "StackOverflowErrorEx.recursivePrint(1);",
+         "public static void stackOverflowError() {",
+         "recursivePrint(1);",
          "}"
       ]
    }

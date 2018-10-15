@@ -57,6 +57,7 @@ public class AUGRAT extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        threadCheckbox = new javax.swing.JCheckBox();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel4 = new javax.swing.JLabel();
 
@@ -121,12 +122,19 @@ public class AUGRAT extends javax.swing.JFrame {
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Select Bug Block* :");
 
-        jLabel7.setText("Total Number of Lines : 000");
+        jLabel7.setText("Total Number of Lines : 0");
 
         jButton2.setText("Add");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
+            }
+        });
+
+        threadCheckbox.setText("Android Thread");
+        threadCheckbox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                threadCheckboxActionPerformed(evt);
             }
         });
 
@@ -136,35 +144,39 @@ public class AUGRAT extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(packagename, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(addjunkcodebutton)))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(packagename)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(addjunkcodebutton)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextArea2, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jTextArea2)
+                                .addGap(65, 65, 65))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel6)
                                 .addGap(10, 10, 10)
                                 .addComponent(bugblockselectcombobox, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGap(205, 205, 205))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                        .addComponent(threadCheckbox)
+                        .addGap(56, 56, 56))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(337, 337, 337)
                 .addComponent(jButton1)
-                .addGap(315, 315, 315))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -175,7 +187,8 @@ public class AUGRAT extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bugblockselectcombobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6)
-                    .addComponent(jButton2))
+                    .addComponent(jButton2)
+                    .addComponent(threadCheckbox))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextArea2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -197,7 +210,7 @@ public class AUGRAT extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addComponent(jSeparator2, javax.swing.GroupLayout.DEFAULT_SIZE, 1, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 544, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -206,7 +219,7 @@ public class AUGRAT extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5)
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 771, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -260,40 +273,46 @@ public class AUGRAT extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void threadCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_threadCheckboxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_threadCheckboxActionPerformed
+
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
 
         JComboBox cb = bugblockselectcombobox;
         JsonBugBlockModels model = null;
         String msg = (String) cb.getSelectedItem();
-       
+
         switch (msg) {
             case "StackOverflowError":
-                model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/StackOverflowError.json");
-                break;
+            model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/StackOverflowError.json");
+            break;
             case "NullPointerException":
-                model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/NullPointerException.json");
-                break;
+            model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/NullPointerException.json");
+            break;
             case "DivideByZeroException":
-                model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/DivideByZeroException.json");
-                 break;
+            model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/DivideByZeroException.json");
+            break;
             case "ClassNotFoundException":
-                model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/ClassNotFoundException.json");
-                break;
+            model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/ClassNotFoundException.json");
+            break;
             case "ArrayIndexOutOfBoundsException":
-                model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/ArrayIndexOutOfBoundsException.json");
-                break;
+            model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/ArrayIndexOutOfBoundsException.json");
+            break;
         }
 
         if (model != null) {
             try {
-                FuseEngine.bugFusion("libs/bodyFormat.augrat","libs/importFormat.augrat", model);
+                if(threadCheckbox.isSelected())
+                FuseEngine.bugFusion("libs/bodyFormatThread.augrat","libs/importFormat.augrat", model);
+                else
+                FuseEngine.bugFusion("libs/bodyFormat.augrat","libs/importFormat.augrat", model);  
             } catch (IOException ex) {
                 Logger.getLogger(AUGRAT.class.getName()).log(Level.SEVERE, null, ex);
-                 JOptionPane.showMessageDialog(null, "Error in Adding BugBlock!", "AUGRAT", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Error in Adding BugBlock!", "AUGRAT", JOptionPane.ERROR_MESSAGE);
             }
         }
-
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void bugblockselectcomboboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bugblockselectcomboboxActionPerformed
@@ -304,22 +323,21 @@ public class AUGRAT extends javax.swing.JFrame {
 
         switch (msg) {
             case "StackOverflowError":
-                jTextArea2.setText("Bug description : Thrown when a stack overflow occurs because an application recurses \ntoo deeply.");
-                break;
+            jTextArea2.setText("Bug description : Thrown when a stack overflow occurs because an application recurses \ntoo deeply.");
+            break;
             case "NullPointerException":
-                jTextArea2.setText("Bug description : Thrown when an application attempts to use null in a case where\nan object is required.");
-                break;
+            jTextArea2.setText("Bug description : Thrown when an application attempts to use null in a case where\nan object is required.");
+            break;
             case "DivideByZeroException":
-                jTextArea2.setText("Bug description : Thrown when an exceptional arithmetic condition has occurred.\nFor example, an integer \\\"divide by zero\\\" throws an instance of this class. ");
-                break;
+            jTextArea2.setText("Bug description : Thrown when an exceptional arithmetic condition has occurred.\nFor example, an integer \\\"divide by zero\\\" throws an instance of this class. ");
+            break;
             case "ClassNotFoundException":
-                jTextArea2.setText("Bug description : Thrown when an application tries to load in a class through its string name\nbut no definition for the class with the specified name could be found.");
-                break;
+            jTextArea2.setText("Bug description : Thrown when an application tries to load in a class through its string name\nbut no definition for the class with the specified name could be found.");
+            break;
             case "ArrayIndexOutOfBoundsException":
-                jTextArea2.setText("Bug description : Thrown to indicate that an array has been accessed with an illegal index.\nThe index is either negative or greater than or equal to the size of the array.");
-                break;
+            jTextArea2.setText("Bug description : Thrown to indicate that an array has been accessed with an illegal index.\nThe index is either negative or greater than or equal to the size of the array.");
+            break;
         }
-
     }//GEN-LAST:event_bugblockselectcomboboxActionPerformed
 
     private void addjunkcodebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addjunkcodebuttonActionPerformed
@@ -403,5 +421,6 @@ public class AUGRAT extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     public static javax.swing.JTextArea javaconsole;
     private javax.swing.JTextField packagename;
+    private static javax.swing.JCheckBox threadCheckbox;
     // End of variables declaration//GEN-END:variables
 }

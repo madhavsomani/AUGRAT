@@ -2,7 +2,7 @@
 //<<!@AUGRAT Class Index@!>>
 public class Augrat {
 
-    public void init(Context context)
+    public static void init(Context context)
     {
         initiatingToast(context);
         //Do not Edit the below comment as Augrat use it as index to place BugBLocks methods calls

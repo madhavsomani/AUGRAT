@@ -34,7 +34,7 @@ public class FuseEngine {
                 //Adding bug method calls in body.augrat from BugBlock
                 if(line.contains("<<!@AUGRAT Constructor Index@!>>"))
                 {
-                      pw.println("  "+model.methodName);
+                      pw.println("          "+model.methodName);
                 }
                 
                  //Adding bug method body in body.augrat from BugBlock
@@ -66,7 +66,7 @@ public class FuseEngine {
          //Adding bug Headers body in import.augrat from BugBlock
          for(int i = 0 ; i < model.headers.size(); i++)
           {
-              px.println("import "+model.headers.get(i));
+              px.println("import "+model.headers.get(i)+";");
           }
         
         pw.flush(); 
