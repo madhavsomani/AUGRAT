@@ -15,3 +15,5 @@ nbproject/private/private.xml
 nbproject/private/private.properties
 build/classes/augrat/AUGRAT$3.class
 /dist/
+*.class
+*.class

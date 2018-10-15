@@ -247,7 +247,7 @@ public class AUGRAT extends javax.swing.JFrame {
         try {
             if(!packagename.getText().isEmpty())
             {
-               JsonBugBlockModels model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/");
+               JsonBugBlockModels model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/StackOverflowError.json");
                 JavaGenerator.merger("libs/import.augrat", "libs/body.augrat",packagename.getText());
             }else{
                 JOptionPane.showMessageDialog(null, "Enter Valid Package name before generating .java File!.","AUGRAT",JOptionPane.ERROR_MESSAGE);

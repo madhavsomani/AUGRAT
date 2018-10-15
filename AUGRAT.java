@@ -1,12 +1,29 @@
-package com.example.com;
-import android.app.Activity;
+package asdasd;
+import android.content.Context;
 import android.widget.Toast;
+//Do not Edit the below comment as Augrat use it as Index to Call BugBLocks
+//<<!@AUGRAT Class Index@!>>
+
 public class Augrat {
 
-    public static void compileTest(Activity activity )
+    public void init(Context context)
     {
-        Toast.makeText(activity.getApplicationContext(),"Augrat successfully compiled!", Toast.LENGTH_LONG).show();
+        initiatingToast(context);
+        //Do not Edit the below comment as Augrat use it as index to place BugBLocks methods calls
+        //<<!@AUGRAT Constructor Index@!>>
+    }
+    
+    public static void compileTest(Context context)
+    {
+        Toast.makeText(context.getApplicationContext(),"Augrat successfully compiled!", Toast.LENGTH_LONG).show();
     }
 
-    
+    public static void initiatingToast(Context context)
+    {
+        Toast.makeText(context.getApplicationContext(),"Starting AUGRAT!", Toast.LENGTH_LONG).show();
+    }
+
+    //Do not edit the below comment as Augrat use it as index to place BugBLocks methods
+    //<<!@AUGRAT Method Index@!>>
+
 }

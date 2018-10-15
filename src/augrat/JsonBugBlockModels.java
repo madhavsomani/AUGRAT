@@ -16,4 +16,9 @@ public class JsonBugBlockModels {
    public ArrayList<String> headers;
    public String bugInfo;
    public ArrayList<String> bugBlock;
+
+    public JsonBugBlockModels() {
+        this.bugBlock = new ArrayList<>();
+        this.headers = new ArrayList<>();
+    }
 }
