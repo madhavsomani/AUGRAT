@@ -7,7 +7,10 @@ package augrat;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JComboBox;
@@ -26,6 +29,13 @@ public class AUGRAT extends javax.swing.JFrame {
     public AUGRAT() {
         initComponents();
         jTextArea2.setText("Bug description : Thrown when a stack overflow occurs because an application recurses \ntoo deeply.");
+        try {
+            readbodyfile();
+        } catch (IOException ex) {
+            Logger.getLogger(AUGRAT.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        totalnooflines.setText("Total Number of Lines : " + AUGRAT.javaconsole.getLineCount());
+        
     }
 
     /**
@@ -55,7 +65,7 @@ public class AUGRAT extends javax.swing.JFrame {
         addjunkcodebutton = new javax.swing.JButton();
         bugblockselectcombobox = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        totalnooflines = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         threadCheckbox = new javax.swing.JCheckBox();
         jSeparator2 = new javax.swing.JSeparator();
@@ -122,7 +132,7 @@ public class AUGRAT extends javax.swing.JFrame {
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Select Bug Block* :");
 
-        jLabel7.setText("Total Number of Lines : 0");
+        totalnooflines.setText("Total Number of Lines : 0");
 
         jButton2.setText("Add");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -147,7 +157,7 @@ public class AUGRAT extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
+                            .addComponent(totalnooflines)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -182,7 +192,7 @@ public class AUGRAT extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel7)
+                .addComponent(totalnooflines)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bugblockselectcombobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -219,7 +229,7 @@ public class AUGRAT extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5)
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 771, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -397,10 +407,23 @@ public class AUGRAT extends javax.swing.JFrame {
         });
 
     }
+    
+    public static void readbodyfile() throws IOException
+   {
+  
+        // Reading  Augrat java file 
+         javaconsole.setText("");
+         List<String> lines = Files.readAllLines(new File("libs/body.augrat").toPath());
+         for(int i=0;i<lines.size();i++)
+         {
+            javaconsole.append(lines.get(i));
+             javaconsole.append("\n");
+         }
+   }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addjunkcodebutton;
-    private javax.swing.JComboBox<String> bugblockselectcombobox;
+    public static javax.swing.JComboBox<String> bugblockselectcombobox;
     public static javax.swing.JList<String> displaybugaddedlist;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
@@ -410,17 +433,17 @@ public class AUGRAT extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTextArea jTextArea2;
+    private static javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextField2;
     public static javax.swing.JTextArea javaconsole;
     private javax.swing.JTextField packagename;
     private static javax.swing.JCheckBox threadCheckbox;
+    public static javax.swing.JLabel totalnooflines;
     // End of variables declaration//GEN-END:variables
 }

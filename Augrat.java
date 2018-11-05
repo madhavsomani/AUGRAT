@@ -1,4 +1,4 @@
-package com.example.madhav.try1;
+package asdads.comaasd.com;
 import android.content.Context;
 import android.widget.Toast;
 import android.util.Log;
@@ -11,7 +11,7 @@ public class Augrat {
         initiatingToast(context);
         //Do not Edit the below comment as Augrat use it as index to place BugBLocks methods calls
         //<<!@AUGRAT Constructor Index@!>>
-          nullPointerException();
+          stackOverflowError();
     }
 
     public static void compileTest(Context context)
@@ -26,12 +26,15 @@ public class Augrat {
 
     //Do not edit the below comment as Augrat use it as index to place BugBLocks methods
     //<<!@AUGRAT Method Index@!>>
-  public static void nullPointerException() {
-  String ptr = null;
-  if (ptr.equals("npe"))
-  Log.d("Output ", "Equal");
+   public static void recursivePrint(int num) {
+  Log.d("Output ", "Number: " + num);
+  if (num == 0)
+  return;
   else
-  Log.d("Output ", "Not Equal");
+  recursivePrint(++num);
+  }
+  public static void stackOverflowError() {
+  recursivePrint(1);
   }
 
 

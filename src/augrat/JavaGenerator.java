@@ -57,6 +57,7 @@ public class JavaGenerator {
         pw.close(); 
           
         readAugratfile();
+        AUGRAT.totalnooflines.setText("Total Number of Lines : " + AUGRAT.javaconsole.getLineCount());
         augratFileDelete(bodyloc);
     
         try{
