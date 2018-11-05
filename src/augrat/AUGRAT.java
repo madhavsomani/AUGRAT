@@ -321,11 +321,19 @@ public class AUGRAT extends javax.swing.JFrame {
         if (model != null) {
             try {
                 if(threadCheckbox.isSelected())
-                FuseEngine.bugFusion("libs/bodyFormatThread.augrat","libs/importFormat.augrat", model);
-                else
-                FuseEngine.bugFusion("libs/bodyFormat.augrat","libs/importFormat.augrat", model);
-                
-                bugBlockList.addElement(msg);
+                {
+                  if(bugBlockList.isEmpty())
+                  FuseEngine.bugFusion("libs/bodyFormatThread.augrat","libs/importFormat.augrat", model,false);
+                  else
+                  FuseEngine.bugFusion("libs/body.augrat","libs/import.augrat", model,true);
+                }else
+                {
+                  if(bugBlockList.isEmpty())
+                     FuseEngine.bugFusion("libs/bodyFormat.augrat","libs/importFormat.augrat", model,false);
+                     else
+                     FuseEngine.bugFusion("libs/body.augrat","libs/import.augrat", model,true);
+                }
+                bugBlockList.addElement(msg); 
             } catch (IOException ex) {
                 Logger.getLogger(AUGRAT.class.getName()).log(Level.SEVERE, null, ex);
                 JOptionPane.showMessageDialog(null, "Error in Adding BugBlock!", "AUGRAT", JOptionPane.ERROR_MESSAGE);

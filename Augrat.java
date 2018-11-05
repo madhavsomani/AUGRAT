@@ -2,6 +2,7 @@ package com.example.madhav.try1;
 import android.content.Context;
 import android.widget.Toast;
 import android.util.Log;
+import android.util.Log;
 //Do not Edit the below comment as Augrat use it as Index to Call BugBLocks
 //<<!@AUGRAT Class Index@!>>
 public class Augrat {
@@ -11,7 +12,8 @@ public class Augrat {
         initiatingToast(context);
         //Do not Edit the below comment as Augrat use it as index to place BugBLocks methods calls
         //<<!@AUGRAT Constructor Index@!>>
-          divideByZero();
+          stackOverflowError();
+          stackOverflowError();
     }
 
     public static void compileTest(Context context)
@@ -26,12 +28,27 @@ public class Augrat {
 
     //Do not edit the below comment as Augrat use it as index to place BugBLocks methods
     //<<!@AUGRAT Method Index@!>>
-  public static void divideByZero() {
-  int num1 = 15;
-  int num2 = 0;
-  int result = 0;
-  result = num1 / num2;
-  Log.d("Output", "Result: " + Integer.toString(result));
+   public static void recursivePrint(int num) {
+  Log.d("Output ", "Number: " + num);
+  if (num == 0)
+  return;
+  else
+  recursivePrint(++num);
+  }
+  public static void stackOverflowError() {
+  recursivePrint(1);
+  }
+
+
+   public static void recursivePrint(int num) {
+  Log.d("Output ", "Number: " + num);
+  if (num == 0)
+  return;
+  else
+  recursivePrint(++num);
+  }
+  public static void stackOverflowError() {
+  recursivePrint(1);
   }
 
 

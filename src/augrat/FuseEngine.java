@@ -5,20 +5,32 @@
  */
 package augrat;
 
+import static augrat.JavaGenerator.duplicateFiles;
 import static augrat.JavaGenerator.readAugratfile;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 public class FuseEngine {
     
-    public static void bugFusion(String bodyloc, String importloc ,JsonBugBlockModels model) throws IOException
+    public static void bugFusion(String bodyloc, String importloc ,JsonBugBlockModels model,Boolean multiBug) throws IOException
     {
+        PrintWriter pw,px = null;
+       
+        if(!multiBug)
+        {
           // PrintWriter object for file3.txt 
-        PrintWriter pw = new PrintWriter("libs/body.augrat"); 
-        PrintWriter px = new PrintWriter("libs/import.augrat");
+         pw = new PrintWriter("libs/body.augrat"); 
+         px = new PrintWriter("libs/import.augrat");
+        }else
+        {
+         pw = new PrintWriter("libs/bodyTemp.augrat"); 
+         px = new PrintWriter("libs/importTemp.augrat");
+        }
         
         BufferedReader br = new BufferedReader(new FileReader(bodyloc)); 
         String line = br.readLine(); 
@@ -66,7 +78,23 @@ public class FuseEngine {
         br.close(); 
         pw.close(); 
         px.close();
-          
+         
+       if(multiBug)
+       {
+           try{
+              JavaGenerator.duplicateFiles("libs/bodyTemp.augrat",bodyloc);
+              JavaGenerator.duplicateFiles("libs/importTemp.augrat",importloc);
+           }catch(IOException ex)
+           {
+                Logger.getLogger(AUGRAT.class.getName()).log(Level.SEVERE, null, ex);
+                JOptionPane.showMessageDialog(null, "Error in MultiBlock logic!", "AUGRAT", JOptionPane.ERROR_MESSAGE);
+           }finally
+           {
+               JavaGenerator.augratFileDelete("libs/bodyTemp.augrat");
+               JavaGenerator.augratFileDelete("libs/importTemp.augrat");
+           }
+           
+       }
        
         JOptionPane.showMessageDialog(null,model.nameOfBug + " Successfully Added!");
     }
