@@ -1,0 +1,21 @@
+{
+   "AUGRATBugBlock":{
+      "nameOfBug":"NullPointerException",
+      "className":"NullPointerExceptionEx",
+      "methodName":"nullPointerException();",
+      "numberOfLines":7,
+      "headers":[
+         "android.util.Log"
+      ],
+      "bugInfo":"Thrown when an application attempts to use null in a case where an object is required.",
+      "bugBlock":[
+         "public static void nullPointerException() {",
+         "String ptr = null;",
+         "if (ptr.equals(\"npe\"))",
+         "Log.d(\"Output \", \"Equal\");",
+         "else",
+         "Log.d(\"Output \", \"Not Equal\");",
+         "}"
+      ]
+   }
+}
