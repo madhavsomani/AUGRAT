@@ -13,9 +13,12 @@ import java.nio.file.Files;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.DefaultListModel;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JOptionPane;
+import javax.swing.ListModel;
 
 /**
  *
@@ -26,6 +29,8 @@ public class AUGRAT extends javax.swing.JFrame {
     /**
      * Creates new form AUGRAT
      */
+    
+    DefaultListModel bugBlockList = new DefaultListModel();
     public AUGRAT() {
         initComponents();
         jTextArea2.setText("Bug description : Thrown when a stack overflow occurs because an application recurses \ntoo deeply.");
@@ -83,6 +88,7 @@ public class AUGRAT extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("Added Bug Block List");
 
+        displaybugaddedlist.setModel(bugBlockList);
         jScrollPane3.setViewportView(displaybugaddedlist);
 
         jTextArea2.setBackground(new java.awt.Color(240, 240, 240));
@@ -317,7 +323,9 @@ public class AUGRAT extends javax.swing.JFrame {
                 if(threadCheckbox.isSelected())
                 FuseEngine.bugFusion("libs/bodyFormatThread.augrat","libs/importFormat.augrat", model);
                 else
-                FuseEngine.bugFusion("libs/bodyFormat.augrat","libs/importFormat.augrat", model);  
+                FuseEngine.bugFusion("libs/bodyFormat.augrat","libs/importFormat.augrat", model);
+                
+                bugBlockList.addElement(msg);
             } catch (IOException ex) {
                 Logger.getLogger(AUGRAT.class.getName()).log(Level.SEVERE, null, ex);
                 JOptionPane.showMessageDialog(null, "Error in Adding BugBlock!", "AUGRAT", JOptionPane.ERROR_MESSAGE);
