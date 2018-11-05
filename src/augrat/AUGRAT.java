@@ -325,14 +325,25 @@ public class AUGRAT extends javax.swing.JFrame {
                   if(bugBlockList.isEmpty())
                   FuseEngine.bugFusion("libs/bodyFormatThread.augrat","libs/importFormat.augrat", model,false);
                   else
-                  FuseEngine.bugFusion("libs/body.augrat","libs/import.augrat", model,true);
+                  {
+                        if(!bugBlockList.contains(msg))
+                      FuseEngine.bugFusion("libs/body.augrat","libs/import.augrat", model,true);
+                      else
+                      JOptionPane.showMessageDialog(null, msg+" BugBlock Already Added to Mainframe!", "AUGRAT", JOptionPane.ERROR_MESSAGE);
+                  }     
                 }else
                 {
                   if(bugBlockList.isEmpty())
                      FuseEngine.bugFusion("libs/bodyFormat.augrat","libs/importFormat.augrat", model,false);
-                     else
-                     FuseEngine.bugFusion("libs/body.augrat","libs/import.augrat", model,true);
+                  else
+                  {
+                       if(!bugBlockList.contains(msg))
+                           FuseEngine.bugFusion("libs/body.augrat","libs/import.augrat", model,true);
+                           else
+                           JOptionPane.showMessageDialog(null, "BugBlock "+ msg+" Already Added to Mainframe!", "AUGRAT", JOptionPane.ERROR_MESSAGE);
+                  }
                 }
+                if(!bugBlockList.contains(msg))
                 bugBlockList.addElement(msg); 
             } catch (IOException ex) {
                 Logger.getLogger(AUGRAT.class.getName()).log(Level.SEVERE, null, ex);
