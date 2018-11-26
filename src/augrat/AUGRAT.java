@@ -5,20 +5,17 @@
  */
 package augrat;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.text.ParseException;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
 import javax.swing.JComboBox;
-import javax.swing.JLabel;
-import javax.swing.JList;
 import javax.swing.JOptionPane;
-import javax.swing.ListModel;
+
 
 /**
  *
@@ -66,7 +63,7 @@ public class AUGRAT extends javax.swing.JFrame {
         packagename = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        junkcodeinput = new javax.swing.JTextField();
         addjunkcodebutton = new javax.swing.JButton();
         bugblockselectcombobox = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
@@ -118,7 +115,7 @@ public class AUGRAT extends javax.swing.JFrame {
 
         jLabel3.setText("Number of Junk Lines :");
 
-        jTextField2.setToolTipText("com.example.myfirstapp");
+        junkcodeinput.setToolTipText("com.example.myfirstapp");
 
         addjunkcodebutton.setText("Add");
         addjunkcodebutton.addActionListener(new java.awt.event.ActionListener() {
@@ -171,7 +168,7 @@ public class AUGRAT extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(junkcodeinput, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(addjunkcodebutton)))
                         .addGap(0, 0, Short.MAX_VALUE))
@@ -212,7 +209,7 @@ public class AUGRAT extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(packagename, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(junkcodeinput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(addjunkcodebutton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -316,6 +313,24 @@ public class AUGRAT extends javax.swing.JFrame {
             case "ArrayIndexOutOfBoundsException":
             model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/ArrayIndexOutOfBoundsException.json");
             break;
+            case "InterruptedException":
+            model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/InterruptedException.json");
+            break;
+            case "FileNotFoundException":
+            model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/FileNotFoundException.json");
+            break;
+            case "StringIndexOutOfBoundsException":
+            model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/StringIndexOutOfBoundsException.json");
+            break;
+            case "IllegalArgumentException":
+            model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/IllegalArgumentException.json");
+            break;
+            case "NumberFormatException":
+            model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/NumberFormatException.json");
+            break;
+            case "ClassCastException":
+            model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/ClassCastException.json");
+            break;
         }
 
         if (model != null) {
@@ -374,11 +389,37 @@ public class AUGRAT extends javax.swing.JFrame {
             case "ArrayIndexOutOfBoundsException":
             jTextArea2.setText("Bug description : Thrown to indicate that an array has been accessed with an illegal index.\nThe index is either negative or greater than or equal to the size of the array.");
             break;
+             case "InterruptedException":
+            jTextArea2.setText("Bug description : InterruptedException that an array has been accessed with an illegal index.\nThe index is either negative or greater than or equal to the size of the array.");
+            break;
+            case "FileNotFoundException":
+            jTextArea2.setText("Bug description : FileNotFoundException Thrown to indicate that an array has been accessed with an illegal index.\nThe index is either negative or greater than or equal to the size of the array.");
+            break;
+            case "StringIndexOutOfBoundsException":
+             jTextArea2.setText("Bug description : StringIndexOutOfBoundsException Thrown to indicate that an array has been accessed with an illegal index.\nThe index is either negative or greater than or equal to the size of the array.");
+            break;
+            case "IllegalArgumentException":
+             jTextArea2.setText("Bug description : IllegalArgumentException Thrown to indicate that an array has been accessed with an illegal index.\nThe index is either negative or greater than or equal to the size of the array.");
+            break;
+            case "NumberFormatException":
+            jTextArea2.setText("Bug description : NumberFormatException Thrown to indicate that an array has been accessed with an illegal index.\nThe index is either negative or greater than or equal to the size of the array.");
+            break;
+            case "ClassCastException":
+            jTextArea2.setText("Bug description : ClassCastException Thrown to indicate that an array has been accessed with an illegal index.\nThe index is either negative or greater than or equal to the size of the array.");
+            break;
         }
     }//GEN-LAST:event_bugblockselectcomboboxActionPerformed
 
     private void addjunkcodebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addjunkcodebuttonActionPerformed
         // TODO add your handling code here:
+           int loopcounter =  Integer.parseInt(junkcodeinput.getText());
+           JsonBugBlockModels model = null;
+           model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/JunkLines.json");
+          for(int i = 0; i < loopcounter/model.numberOfLines ; i++)
+          {
+          
+          }
+          
     }//GEN-LAST:event_addjunkcodebuttonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -467,8 +508,8 @@ public class AUGRAT extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private static javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextField jTextField2;
     public static javax.swing.JTextArea javaconsole;
+    private javax.swing.JTextField junkcodeinput;
     private javax.swing.JTextField packagename;
     private static javax.swing.JCheckBox threadCheckbox;
     public static javax.swing.JLabel totalnooflines;
