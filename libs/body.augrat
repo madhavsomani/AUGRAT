@@ -7,6 +7,7 @@ public class Augrat {
         initiatingToast(context);
         //Do not Edit the below comment as Augrat use it as index to place BugBLocks methods calls
         //<<!@AUGRAT Constructor Index@!>>
+          JunkCodePart();
     }
 
     public static void compileTest(Context context)
@@ -21,5 +22,17 @@ public class Augrat {
 
     //Do not edit the below comment as Augrat use it as index to place BugBLocks methods
     //<<!@AUGRAT Method Index@!>>
+  public static void JunkCodePart() {
+  bool con=true;
+  if(con==true)
+  for(int i=0, i<10000, i++)
+  {
+  return true;
+  }
+  else
+  return false
+  }
+
+
 
 }

@@ -414,11 +414,39 @@ public class AUGRAT extends javax.swing.JFrame {
         // TODO add your handling code here:
            int loopcounter =  Integer.parseInt(junkcodeinput.getText());
            JsonBugBlockModels model = null;
+           String msg = "JunkLines";
            model = JsonHelper.bugBlockJsonRead("libs/BugBlocks/JunkLines.json");
-          for(int i = 0; i < loopcounter/model.numberOfLines ; i++)
+           int lenth = loopcounter/model.numberOfLines ;
+           for(int i = 0; i < lenth ; i++)
           {
-          
+             if (model != null) {
+              try {
+                if(threadCheckbox.isSelected())
+                {
+                  if(bugBlockList.isEmpty())
+                  FuseEngine.bugFusion("libs/bodyFormatThread.augrat","libs/importFormat.augrat", model,false);
+                  else
+                  {
+                      FuseEngine.bugFusion("libs/body.augrat","libs/import.augrat", model,true);
+                  }     
+                }else
+                {
+                  if(bugBlockList.isEmpty())
+                     FuseEngine.bugFusion("libs/bodyFormat.augrat","libs/importFormat.augrat", model,false);
+                  else
+                  {
+                    FuseEngine.bugFusion("libs/body.augrat","libs/import.augrat", model,true);    
+                  }
+                }
+                
+            } catch (IOException ex) {
+                Logger.getLogger(AUGRAT.class.getName()).log(Level.SEVERE, null, ex);
+                JOptionPane.showMessageDialog(null, "Error in Adding BugBlock!", "AUGRAT", JOptionPane.ERROR_MESSAGE);
+              }
+            }
           }
+           if(!bugBlockList.contains(msg))
+                bugBlockList.addElement(msg); 
           
     }//GEN-LAST:event_addjunkcodebuttonActionPerformed
 
