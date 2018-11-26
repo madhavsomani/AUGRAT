@@ -41,19 +41,34 @@ public class FuseEngine {
                 //Adding bug method calls in body.augrat from BugBlock
                 if(line.contains("<<!@AUGRAT Constructor Index@!>>"))
                 {
+                    if(!model.nameOfBug.equals("JunkLines"))
                       pw.println("          "+model.methodName);
+                    else
+                    {
+                        try{
+                            for(int i = 0 ; i < model.bugBlock.size(); i++)
+                            {
+                              pw.println("  "+ model.bugBlock.get(i));
+                            }
+                        }finally{
+                              pw.println("\n");
+                        }
+                    }
+                        
                 }
                 //Adding bug method body in body.augrat from BugBlock
                 if(line.contains("<<!@AUGRAT Method Index@!>>"))
                 {
-                    try{
-                        for(int i = 0 ; i < model.bugBlock.size(); i++)
-                        {
-                          pw.println("  "+ model.bugBlock.get(i));
+                   if(!model.nameOfBug.equals("JunkLines")){
+                        try{
+                            for(int i = 0 ; i < model.bugBlock.size(); i++)
+                            {
+                              pw.println("  "+ model.bugBlock.get(i));
+                            }
+                        }finally{
+                              pw.println("\n");
                         }
-                    }finally{
-                          pw.println("\n");
-                    }
+                   }
                 }
             line = br.readLine(); 
         } 
@@ -95,7 +110,7 @@ public class FuseEngine {
            }
            
        }
-       
+       if(!model.nameOfBug.equals("JunkLines"))
         JOptionPane.showMessageDialog(null,model.nameOfBug + " Successfully Added!");
     }
     

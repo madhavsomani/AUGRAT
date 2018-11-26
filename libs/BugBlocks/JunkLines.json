@@ -5,19 +5,15 @@
   "methodName": "JunkCodePart();",
   "numberOfLines": 7,
   "headers": ["android.util.Log"],
-  "bugInfo": "Thrown to indicate that an array has been accessed with an illegal index. The index is either negative or greater than or equal to the size of the array.",
+  "bugInfo": "Junk Code Adder",
   "bugBlock": [
-  "public static void JunkCodePart() {",
-        "bool con=true;",
-        "if(con==true)",
-            "for(int i=0, i<10000, i++)",
+        "if(true)",
+          "{",
+            "for(int i=0; i<1000; i++)",
               "{",
-                "return true;",
+              "Log.d(\"Output \", \"Number: \" + i);",
               "}",
-        "else",
-          "return false",
-
-    "}"
-  ]
+          "}"
+     ]
     }
   }

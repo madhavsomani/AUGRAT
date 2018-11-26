@@ -424,10 +424,10 @@ public class AUGRAT extends javax.swing.JFrame {
                 if(threadCheckbox.isSelected())
                 {
                   if(bugBlockList.isEmpty())
-                  FuseEngine.bugFusion("libs/bodyFormatThread.augrat","libs/importFormat.augrat", model,false);
+                    FuseEngine.bugFusion("libs/bodyFormatThread.augrat","libs/importFormat.augrat", model,false);
                   else
                   {
-                      FuseEngine.bugFusion("libs/body.augrat","libs/import.augrat", model,true);
+                    FuseEngine.bugFusion("libs/body.augrat","libs/import.augrat", model,true);
                   }     
                 }else
                 {
@@ -435,19 +435,24 @@ public class AUGRAT extends javax.swing.JFrame {
                      FuseEngine.bugFusion("libs/bodyFormat.augrat","libs/importFormat.augrat", model,false);
                   else
                   {
-                    FuseEngine.bugFusion("libs/body.augrat","libs/import.augrat", model,true);    
+                     FuseEngine.bugFusion("libs/body.augrat","libs/import.augrat", model,true);    
                   }
                 }
-                
+                if(!bugBlockList.contains(msg))
+                bugBlockList.addElement(msg); 
             } catch (IOException ex) {
                 Logger.getLogger(AUGRAT.class.getName()).log(Level.SEVERE, null, ex);
                 JOptionPane.showMessageDialog(null, "Error in Adding BugBlock!", "AUGRAT", JOptionPane.ERROR_MESSAGE);
               }
             }
           }
-           if(!bugBlockList.contains(msg))
-                bugBlockList.addElement(msg); 
-          
+           JOptionPane.showMessageDialog(null,model.nameOfBug + " Successfully Added!");
+                try {
+                 readbodyfile();
+             } catch (IOException ex) {
+                 Logger.getLogger(AUGRAT.class.getName()).log(Level.SEVERE, null, ex);
+             }
+        totalnooflines.setText("Total Number of Lines : " + AUGRAT.javaconsole.getLineCount());
     }//GEN-LAST:event_addjunkcodebuttonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

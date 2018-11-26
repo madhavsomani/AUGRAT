@@ -1,6 +1,148 @@
-package asd;
+package com.example.madhav.try1;
 import android.content.Context;
 import android.widget.Toast;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
+import android.util.Log;
 import android.util.Log;
 //Do not Edit the below comment as Augrat use it as Index to Call BugBLocks
 //<<!@AUGRAT Class Index@!>>
@@ -11,6 +153,1284 @@ public class Augrat {
         initiatingToast(context);
         //Do not Edit the below comment as Augrat use it as index to place BugBLocks methods calls
         //<<!@AUGRAT Constructor Index@!>>
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
+  if(true)
+  {
+  for(int i=0; i<1000; i++)
+  {
+  Log.d("Output ", "Number: " + i);
+  }
+  }
+
+
           stackOverflowError();
     }
 
