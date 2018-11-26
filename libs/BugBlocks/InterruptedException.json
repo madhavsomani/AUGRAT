@@ -1,0 +1,22 @@
+{
+   "AUGRATBugBlock":{
+      "nameOfBug":"InterruptedException",
+      "className":"InterruptedExceptionEx",
+      "methodName":"interruptedExceptionEx();",
+      "numberOfLines":8,
+      "headers":[
+         "android.util.Log"
+      ],
+      "bugInfo":"Thrown when a thread is waiting, sleeping, or otherwise occupied, and the thread is interrupted, either before or during the activity.",
+      "bugBlock":[
+         "public void interruptedExceptionEx() {",
+		"try {",
+			"Thread t = new Thread();",
+			"t.sleep(10000);",
+		"} catch (InterruptedException e) {",
+			"Log.d(\"Message \", \"InterruptedExceptionEx \");",
+		"}",
+	"}"
+      ]
+   }
+}

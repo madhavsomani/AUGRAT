@@ -1,0 +1,22 @@
+{
+   "AUGRATBugBlock":{
+      "nameOfBug":"StringIndexOutOfBoundsException",
+      "className":"StringIndexOutOfBoundsExceptionEx",
+      "methodName":"strIndexOutOfBoundsExceptionEx();",
+      "numberOfLines":8,
+      "headers":[
+         "android.util.Log"
+      ],
+      "bugInfo":"Thrown by String methods to indicate that an index is either negative or greater than the size of the string.",
+      "bugBlock":[
+         "public void strIndexOutOfBoundsExceptionEx() {",
+		"try {",
+			"String a = \"a\";",
+			"char c = a.charAt(2);",
+		"Log.d(\"Output \", \"c: \" + c);",
+		"} catch (StringIndexOutOfBoundsException e) {",
+			"Log.d(\"Message \", \"StringIndexOutOfBoundsExceptionEx\");",
+	"}"
+      ]
+   }
+}

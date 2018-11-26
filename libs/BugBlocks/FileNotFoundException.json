@@ -1,0 +1,22 @@
+{
+   "AUGRATBugBlock":{
+      "nameOfBug":"FileNotFoundException",
+      "className":"FileNotFoundExceptionEx",
+      "methodName":"fileNotFoundExceptionEx();",
+      "numberOfLines":10,
+      "headers":[
+         "android.util.Log, java.io.*"
+      ],
+      "bugInfo":"Signals that an attempt to open the file denoted by a specified pathname has failed.",
+      "bugBlock":[
+         "public void fileNotFoundExceptionEx() {",
+		"try {",
+			"File file = new File(\"E://file.txt\");",
+			"FileReader fr = new FileReader(file);",
+		"} catch (Exception e) {",
+			"Log.d(\"Message \",\"FileNotFoundExceptionEx\");",
+		"}",
+	"}"
+      ]
+   }
+}

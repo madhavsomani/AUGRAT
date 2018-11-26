@@ -1,0 +1,20 @@
+{
+   "AUGRATBugBlock":{
+      "nameOfBug":"IllegalArgument",
+      "className":"IllegalArgumentEx",
+      "methodName":"illegalArg();",
+      "numberOfLines":6,
+      "headers":[
+         "android.util.Log"
+      ],
+      "bugInfo":"Thrown to indicate that a method has been passed an illegal or inappropriate argument.",
+      "bugBlock":[
+         "public void illegealArg() {",
+		"Thread t = new Thread();",
+		"Thread t1 = new Thread();",
+		"t.setPriority(7); ",
+		"t1.setPriority(17);",
+	"}"
+      ]
+   }
+}
